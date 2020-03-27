@@ -1,0 +1,101 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 6rem;
+        border-radius: 100px;
+        display: inline-block;
+        margin-top: 2rem;
+        transition: all .2s;
+        position: relative;
+        font-size: $default-font-size;
+
+        border: none;
+        cursor: pointer;
+    }
+    
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 1.5rem rgba($color-black,.2);
+
+        &::after {
+            transform: scaleX(1.2) scaleY(1.4);
+            opacity: 0;
+        }
+    }
+    
+    &:active, &:focus {
+        outline:none;
+        transform: translateY(-.1rem);
+        box-shadow: 0 1rem 1.5rem rgba($color-black,.1);
+    }
+    
+    &-white {
+        background-color: $color-white;
+        color: $color-grey;
+        font-size: 1.4rem;
+        letter-spacing: .15rem;
+        font-weight: 400;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &-blue {
+        background-image: linear-gradient(to left top, $color-primary, $color-secondary);
+        color: $color-white;
+        font-size: 1.4rem;
+        letter-spacing: .15rem;
+        font-weight: 400;
+
+        &::after {
+            background-image: linear-gradient(to left, $color-primary, $color-secondary);
+        }
+    }
+    
+    &::after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    &-animated {
+        animation: slideUpBtn .75s ease-out .5s;
+        animation-fill-mode: backwards;
+    }
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: .1rem solid $color-primary;
+        padding: .3rem;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+        transform: translateY(-.2rem);
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+        transform: translateY(0);
+    }
+}

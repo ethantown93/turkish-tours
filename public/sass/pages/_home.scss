@@ -1,0 +1,49 @@
+.section-about {
+    background-color: $color-grey-1;
+    padding: 25rem 0;
+    margin-top: -20vh;
+}
+
+.section-features {
+    padding: 23rem 0;
+    background-image: linear-gradient(to bottom right, rgba($color-primary, 0.604),
+    rgba($color-secondary, 0.604) ),
+    url('https://images.unsplash.com/photo-1564665759044-959473395029?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -10.4rem;
+
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+}
+
+.section-tours {
+    background-color: $color-grey-1;
+    padding: 25rem 0 25rem 0;
+    margin-top: -10.5rem;
+}
+
+.section-reviews {
+    position: relative;
+    padding: 15rem 0;
+}
+
+.section-booking {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $color-primary, $color-secondary);
+}
+
+.booking {
+    background-image: linear-gradient(105deg, rgba($color-white, .8) 0%,  rgba($color-white, .8) 50%, transparent 50%), url('https://images.unsplash.com/photo-1525415994794-b6c227be96fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .25);
+
+    height: 50rem;
+
+    &-form {
+        width: 50%;
+        padding: 6rem;
+    }
+}

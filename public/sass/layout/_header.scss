@@ -1,0 +1,23 @@
+.header {
+    position: relative;
+    background-image: linear-gradient(to bottom right, rgba($color-primary, 0.604),
+    rgba($color-secondary, 0.604) ),
+    url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80');
+    height:95vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    .logo-box {
+        position: absolute;
+        top: 3%;
+        left: 3%;
+    
+        .logo{
+            font-weight: 400;
+            font-size: 3rem;
+            color: $color-white;
+        }
+    }
+}
