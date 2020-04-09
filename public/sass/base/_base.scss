@@ -9,4 +9,31 @@
 html {
     //defines font size
     font-size: 62.5%;
+
+    @include responsive(big-desktop) {
+        font-size: 75%;
+    }
+
+    @include responsive(tablet-landscape) {
+        font-size: 56.25%;
+    }
+
+    @include responsive(tablet-portrait) {
+        font-size: 50%;
+    }
+
+    @include responsive(phone) {
+        font-size: 45%;
+    }
+
 }
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include responsive(tablet-portrait) {
+        padding: 0;
+    }
+}
+

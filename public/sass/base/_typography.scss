@@ -3,7 +3,6 @@ body {
     font-family: "Lato", sans-serif;
     color: $color-grey;
     width: 100%;
-    padding: 3rem;
     line-height: 1.7;
 }
 
@@ -26,6 +25,11 @@ body {
         font-weight: 400;
         letter-spacing: .5rem;
         animation: slideLeft .75s ease-out;
+
+        @include responsive(phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
     }
     
     &-primary-secondary {
@@ -34,6 +38,10 @@ body {
         font-weight: 700;
         letter-spacing: .25rem;
         animation: slideRight .75s ease-out;
+
+        @include responsive (phone){
+            font-size: 2rem;
+        }
     }
 }
 
@@ -47,6 +55,10 @@ body {
     color: transparent;
     letter-spacing: .2rem;
     transition: all .2s;
+
+    @include responsive(phone) {
+        font-size: 2.5rem;
+    }
 
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);

@@ -3,11 +3,21 @@
     padding: 10rem 0;
     font-size: 1.4rem;
 
+    @include responsive(tablet-portrati) {
+        padding: 7rem 0;
+    }
+
     &-logo-box {
         width: 15rem;
         margin: 0 auto;
         font-weight: 700;
         margin-bottom: 8rem;
+
+        @include responsive(tablet-portrait) {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 5rem;
+        }
     }
 
     &-logo {
@@ -17,6 +27,11 @@
     &-navigation {
         border-top: 1px solid $color-grey-1;
         display: inline-block;
+
+        @include responsive(tablet-portrait) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &-list {
@@ -56,5 +71,11 @@
         padding-top: 2rem;
         border-top: 1px solid $color-grey-1;
         float: right;
+
+        @include responsive(tablet-portrait) {
+            width: 100%;
+            text-align: center;
+            float: none;
+        }
     }
 }

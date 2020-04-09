@@ -9,6 +9,21 @@
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
+    @include responsive(tablet-portrait) {
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+
+    @include responsive(phone) {
+        clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
+    }
+
+    .heading {
+
+        @include responsive(phone) {
+            width: 75%;
+        }
+    }
+
     .logo-box {
         position: absolute;
         top: 3%;

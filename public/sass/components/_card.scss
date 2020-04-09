@@ -143,5 +143,60 @@
         font-size: 6rem;
         font-weight: 100;
     }
+        
+}
 
+@include responsive(tablet-portrait) {
+    .card {
+        height: auto;
+        border-radius: .5rem;
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    
+        &-side{
+            height: auto;
+            position: relative;
+            box-shadow: none;
+
+            &-back {
+                transform: rotateY(0deg);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    
+                &-1{
+                    
+                    background-image: linear-gradient( to right bottom, $blue-ras-light, $amin-dark)
+                }
+    
+                &-2 {
+                    background-image: linear-gradient( to right bottom, $quepal-light, $quepal-dark);
+                }
+    
+                &-3 {
+                    background-image: linear-gradient( to right bottom, $orange-fun-light, $orange-fun-dark);
+                }
+            }
+        }
+    
+        &:hover &-side-front {
+            transform: rotateY(0deg);
+        }
+    
+        &-cta {
+            position: relative;
+            top: 0%;
+            left: 0%;
+            transform: translate(0);
+            width: 100%;
+            padding: 7rem 4rem 4rem 4rem;
+        }
+    
+        &-price-box {
+            margin-bottom: 8rem;
+        }
+    
+        &-price-value {
+            font-size: 6rem;
+        }
+            
+    }
 }

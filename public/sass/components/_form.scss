@@ -13,6 +13,10 @@
         display: block;
         transition: all .3s;
 
+        @include responsive(tablet-portrait){
+            width: 100%;
+        }
+
         &email {
             background-color: rgba($color-white, .5);
             color: inherit;
